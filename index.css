@@ -18,7 +18,7 @@
 .wrapper{
     width: 100vw;
     height: 100vh;
-    margin: 0;
+    
     background-color:var(--colorDark1)
 }
 h1{
@@ -38,7 +38,7 @@ h1{
     opacity: 1;
     justify-content: space-between;
     margin-top: 4rem;
-    align-items: center;
+    
 }
 .tab{
     cursor: pointer;
@@ -52,14 +52,14 @@ h1{
     background-color: rgba(219,226,239,0.5);
     border-radius: 4px;
 }
-.weather-container{
+/*.weather-container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-block: 4rem;
 
-}
+}*/
 .sub-container{
     display: flex;
     flex-direction: column;
@@ -70,7 +70,7 @@ h1{
 .grant-location-container{
     display: none;
 }
-.grant-location-container.visible{
+.grant-location-container.active{
   display: flex;
 }
 .location{
@@ -78,6 +78,7 @@ h1{
 }
 .btn{
     all:unset;
+    margin-bottom: 10px;
     color:white;
     background-color:var(--colorDark2);
     border-radius: 5px;
@@ -110,7 +111,7 @@ display: none;
 
  }
  .loading-container.active{
-
+   display: flex;
     
 
  }
@@ -119,20 +120,11 @@ display: none;
     
 }
 .user-info-container{
-    /*display: none;*/
+    display: none;
 }
 .user-info-container.active{
     display: flex;
     
-}
-.name{
-   
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 1rem;
-    gap:0 0.5rem;
-
 }
 .user-info-container p{
     font-size: 1.5rem;
@@ -143,6 +135,16 @@ display: none;
     width: 90px;
     height: 90px;
 }
+.name{
+   
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    gap:0 0.5rem;
+
+}
+
 
 .name img{
     width: 30px;
@@ -199,24 +201,25 @@ display: none;
     margin :0 auto;
     justify-content: center;
     align-items: center;
-    
+    margin-top: 50px;
     margin-bottom: 3rem;
     gap:0 10px;
 
 }
 .form-container.active{
  display: flex  ;
+ top:20px;
  
    }
-.form-container input{
+   .form-container input{
     all:unset;
-    width: calc(100%-80px);
-    background-color: rgba(219,226,239,0.5);
-    border-radius: 10px;
-    padding:0 20px;
+    width: calc(100%- 80px);
     height:40px;
-    
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
 }
+
 .form-container input::placeholder{
     color:rgba(255,255,255,0.7);
 }
@@ -224,7 +227,7 @@ display: none;
     outline: 3px solid rgba(255,255,255,0.7);
 }
 .form-container .btn{
-    padding: 2px 10px;
+    padding: 3px 11px;
     width: 40px;
     height: 40px;
     display: flex;

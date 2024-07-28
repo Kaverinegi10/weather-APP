@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
+            alert("allow-location");
         } else {
             alert("Geolocation is not supported by this browser.");
         }
