@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel= "stylesheet"  href="index.css">
-    <script src="index.js"></script>
+    
 </head>
 <body>
     <script src="index.js"></script>
@@ -13,15 +13,16 @@
     <h1>WEATHER APP</h1>
 
     <div class="tab-container">
-        <p class="tab" data-userWeather>Your weather</p>
+        <p class="tab  current-tab" data-userWeather>Your weather</p>
         <p class="tab" data-searchWeather>Search weather</p>
+    
     </div>
 
     <div class="weather-container">
-        <div class="grant-location-container">
-          <img src="./assets/location.png" width="80" height="80" loading="lazy" alt="location"> 
+        <div class="sub-container grant-location-container">
+          <img src="./assets/location.png" class="location" width="80" height="80" loading="lazy" alt="location"> 
           <p>grant Location Access</p>
-          <p>Allow Access To Get Weather Information</p>
+          <p data-messagetext>Allow Access To Get Weather Information</p>
           <button class="btn" data-grantAccess>Grant Access</button>
         </div>
 <!--search form-->
@@ -34,26 +35,26 @@
             </form>
 <!--loading screen-->
 
-<div class="loading-container">
+<div class="sub-container loading-container">
     <img src="./assets/loading.gif" width="150" height="150" alt="text">
 
 
 </div>
 <!--weather info ui-->
-<div class="user-info-container">
+<div class=" sub-container user-info-container ">
 
     <!--city name                   -->
     <div class="name">
         <p data-cityName></p>
         <img data-countryIcon alt="text">
     </div>
-    <!--waether description-->
+    <!--weather description-->
     <p data-weatherDesc></p>
     <img data-weatherIcon alt="text">
     <!--temp-->
     <p data-temp></p>
 
-    <div class=".paramter-container">
+    <div class="sub-container parameter-container">
        <!--card1-->
         <div class="parameter">
             <img src="assets/wind.png" alt="text">
